@@ -3,6 +3,7 @@ import './CustomerList.css';
 import DashboardNavbar from '../../DashboardNavbar/DashboardNavbar';
 import Sidebar from '../../Sidebar/Sidebar';
 import DropDown from '../DropDown/DropDown';
+import BackTop from '../../../BackTop/BackTop';
 
 const CustomerList = () => {
     const [lists, setLists] = useState([]);
@@ -54,6 +55,7 @@ const CustomerList = () => {
                     </div>
                 </main>
             </div>
+        <BackTop></BackTop>    
         </div>
     );
 };

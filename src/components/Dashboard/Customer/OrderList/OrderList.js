@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../../App';
+import BackTop from '../../../BackTop/BackTop';
 import DashboardNavbar from '../../DashboardNavbar/DashboardNavbar';
 import Sidebar from '../../Sidebar/Sidebar';
 
@@ -48,6 +49,7 @@ const OrderList = ({option}) => {
                     </div>
                 </main>
             </div>
+        <BackTop></BackTop>    
         </div>
     );
 };
