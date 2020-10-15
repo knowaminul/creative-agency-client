@@ -1,0 +1,17 @@
+.carousel .slide {
+    background: none !important;
+}
+
+.carousel .control-prev.control-arrow, .carousel .control-arrow, .carousel .thumb, .carousel .carousel-status{
+    display: none !important;
+}
+
+.carousel .control-dots .dot{
+    background: #FBD062 !important;
+}
+.carousel .control-dots{
+    position: static !important;
+    margin: 50px 0 !important;
+}
+
+  

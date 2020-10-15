@@ -1,0 +1,14 @@
+h1{
+    color: #111430;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.01em;
+}
+
+.btn{
+    font-size: 16px !important;
+    border-radius: 5px;
+    padding: 3px 20px;
+}
