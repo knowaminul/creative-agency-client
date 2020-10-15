@@ -8,7 +8,7 @@ const CustomerList = () => {
     const [lists, setLists] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://infinite-woodland-13167.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setLists(data));
     }, [])

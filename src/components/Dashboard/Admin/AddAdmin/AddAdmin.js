@@ -12,11 +12,12 @@ const AddAdmin = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        event.target.reset();
         const formData = new FormData()
         console.log(info);
         formData.append('email', info.email);
 
-        fetch('http://localhost:5000/addAdmin', {
+        fetch('https://infinite-woodland-13167.herokuapp.com/addAdmin', {
             method: 'POST',
             body: formData
         })

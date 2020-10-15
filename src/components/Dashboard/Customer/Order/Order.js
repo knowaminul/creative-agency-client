@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { UserContext } from '../../../../App';
@@ -13,15 +13,16 @@ const Order = () => {
     const history = useHistory()
 
     const { register, handleSubmit, watch, errors } = useForm();
-    const onSubmit = data => {
-        const taskDetails = {...loggedInUser, ...data};
+    const onSubmit = (data, e) => {
+        const orders = {...loggedInUser, ...data};
+        e.target.reset();
 
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://infinite-woodland-13167.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(taskDetails)
+            body: JSON.stringify(orders)
           })
           .then(res => res.json())
           .then(data => {

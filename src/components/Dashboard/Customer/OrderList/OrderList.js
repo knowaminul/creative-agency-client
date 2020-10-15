@@ -8,7 +8,7 @@ const OrderList = ({option}) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleOrder?email=${loggedInUser.email}`)
+        fetch(`https://infinite-woodland-13167.herokuapp.com/singleOrder?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => setOrder(data));
     }, [])    

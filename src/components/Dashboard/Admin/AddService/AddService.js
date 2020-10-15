@@ -3,7 +3,7 @@ import DashboardNavbar from '../../DashboardNavbar/DashboardNavbar';
 import Sidebar from '../../Sidebar/Sidebar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
-
+import './AddService.css';
 
 const AddService = () => {
     const [info, setInfo] = useState({});
@@ -21,13 +21,14 @@ const AddService = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        event.target.reset();
         const formData = new FormData()
         console.log(info);
         formData.append('file', file);
         formData.append('title', info.title);
         formData.append('description', info.description);
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://infinite-woodland-13167.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })
@@ -55,9 +56,9 @@ const AddService = () => {
                                 <input onBlur={handleBlur} type="text" className="form-control" name="title" placeholder="Enter title" />
                             </div>
                             <div className="col">
-                                <div style={{ position: 'relative', overflow: 'hidden', display: 'inlineBlock' }}>
-                                    <button class="btn" style={{ color: '#009444', backgroundColor: '#DEFFED', marginTop: '30px',  padding: '6px 20px', border: '1px solid #009444', borderRadius: '5px' }}><FontAwesomeIcon icon={faCloudUploadAlt} /> Upload Image</button>
-                                    <input style={{ position: 'absolute', opacity: 0, fontSize: '100px' }} onChange={handleFileChange} type="file" class="form-control-file" id="exampleFormControlFile1" />
+                                <div className="upload">
+                                    <button className="upload-btn"><FontAwesomeIcon icon={faCloudUploadAlt}/> Upload Image</button>
+                                    <input onChange={handleFileChange} type="file" name="myfile" />
                                 </div>
                             </div>
                         </div>
