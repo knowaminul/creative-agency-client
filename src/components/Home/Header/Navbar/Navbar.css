@@ -26,3 +26,9 @@
 .navbar-light .navbar-nav .nav-link:hover::before {
     width: 100%;
 }
+
+@media (max-width: 769px){
+    .navbar-nav{
+        align-items: center;
+    }        
+}

@@ -82,18 +82,7 @@ table.table .avatar {
     margin-right: 10px;
 }
 
-.dropdown .css-yk16xz-control {
-    width: 120px;
-}
-
-.pending{
-    color: #FF4545 !important;
-}
-
-.onGoing{
-    color: #FFBD3E !important;
-}
-
-.done{
-    color: #009444 !important;
+.dropdown, .dropleft, .dropright, .dropup {
+    border: none;
+    background: transparent;
 }
