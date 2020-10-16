@@ -10,7 +10,7 @@ class DropDown extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        status: "banana",
+        status: "Pending",
       };
   
       this.handleChange = this.handleChange.bind(this);

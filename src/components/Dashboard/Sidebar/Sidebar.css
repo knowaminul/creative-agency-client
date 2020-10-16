@@ -1,0 +1,7 @@
+.navbar-nav .nav-link :hover{
+    color: green !important;
+}
+
+.sidebar a:hover{
+    text-decoration: none;
+}

@@ -14,7 +14,7 @@ const Order = () => {
 
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = (data, e) => {
-        const orders = {...loggedInUser, ...data};
+        const orders = {...loggedInUser, ...data, status: 'Pending'};
         e.target.reset();
 
         fetch('https://infinite-woodland-13167.herokuapp.com/addOrder', {

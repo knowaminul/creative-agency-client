@@ -37,7 +37,7 @@ const Review = () => {
                     <h5 style={{ fontSize: '22px', fontWeight: '500', color: '#0C0C0C' }} className="pb-3">Review</h5>
                     <form onSubmit={handleSubmit(onSubmit)} className="w-50">
                         <div className="form-group">
-                            <input ref={register({ required: true })} type="text" className="form-control" name="name" defaultValue={loggedInUser.name} />
+                            <input ref={register({ required: true })} type="text" className="form-control" name="name" defaultValue={loggedInUser.name} placeholder="Name" />
                             {errors.name && <span className="error">Name is required</span>}
                         </div>
                         <div className="form-group">

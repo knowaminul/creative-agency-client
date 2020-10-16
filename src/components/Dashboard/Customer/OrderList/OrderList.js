@@ -4,7 +4,7 @@ import BackTop from '../../../BackTop/BackTop';
 import DashboardNavbar from '../../DashboardNavbar/DashboardNavbar';
 import Sidebar from '../../Sidebar/Sidebar';
 
-const OrderList = ({option}) => {
+const OrderList = () => {
     const [order, setOrder] = useState([]);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
@@ -31,12 +31,12 @@ const OrderList = ({option}) => {
                         <div className="row">
                             {
                                 order.map(order =>
-                                    <div className="col-md-5 col-sm-5 col-xs-10">
+                                    <div key={order._id} className="col-md-5 col-sm-5 col-xs-10">
                                         <div class="card rounded">
                                             <div class="card-body">
                                                 <div className="d-flex align-items-center justify-content-between">
                                                     <img style={{ height: '50px', width: '50px', borderRadius: '100px' }} src={`https://placeimg.com/640/480/tech/${order._id}`} alt="" />
-                                                    <a href="/" class="btn btn-outline-success btn-sm">{order.value}</a>
+                                                    <span style={{ cursor: 'none' }} className="btn btn-outline-success btn-sm">{order.status}</span>
                                                 </div>
                                                 <h5 class="card-title mt-3" style={{ fontSize: '20px', fontWeight: 600, color: '#111430' }}>{order.service}</h5>
                                                 <span class="card-text text-secondary">{order.details}</span>
