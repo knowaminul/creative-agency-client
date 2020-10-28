@@ -1,12 +1,14 @@
 # MERN Creative Agency
 
-## Project descriptionTechnology: 
+## Project description
+
+### Technology: 
 * React
 * Node.js
 * MongoDB
 * Express.js
 
-## Features:
+### Features:
 * Allows users to login and order preferred services.
 * Allows users to review about the site.
 * Allow users to see the ordered services and currrent status.
