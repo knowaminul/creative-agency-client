@@ -11,7 +11,7 @@
 ### Features:
 * Allow users to login and order preferred services.
 * Allow users to review about the site.
-* Allow users to see the ordered services and currrent status.
+* Allow users to see the ordered services and current status.
 * Allow admin to change the users’ ordered service status.
 * Allow admin to add different admin.
 
